@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n;
+        let min = Number.MAX_VALUE;
+        let max = 0;
+        // 0   ..... MAX_VALUE
+
+        while (true) {
+
+            n = prompt("Ange ett tal större än 0");
+            // Vid avbryt = null
+            if (n === null)
+                break;
+        
+
+            if (n > 0) {
+                min = Math.min(n, min);
+                max = Math.max(n, max);
+            }
+        }
+
+        alert("Största talet är " + max + "\nMinsta talet är " + min);
+    </script>
+</body>
+
+</html>

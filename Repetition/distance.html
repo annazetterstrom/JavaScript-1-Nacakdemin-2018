@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Avståndsformel</title>
+</head>
+<body>
+    <script>
+      /* d = sqrt((x2-x1)^2 + (y2-y1)^2)  
+      Skriv ett program som läser in två punkter
+      via en prompt och beräknar avståndet mellan två punkter.
+      */ 
+
+     let x1,x2,y1,y2; 
+     /*x1= prompt('Ange x1');
+     x2 = prompt('Ange x2');
+     y1= prompt('Ange y1');
+     y2= prompt('Ange y2'); */
+     // Via en enda prompt t.ex (x1,y1,x2,y2)
+     while(true){
+     let str = prompt('Ange x1,y1,x2,y2' , 'x1,y1,x2,y2');
+     if(str === null){
+         break;
+     }
+     let arr = str.split(",");
+     if(arr.length === 4){
+         let d = distance(arr[0],arr[1],arr[2],arr[3]);
+         alert(d.toFixed(4));
+     }
+     else{
+         alert('Felaktig inmatning!')
+     }
+    }
+    alert('Hejdå. Välkommen tillbaka!')
+     function distance(x1,y1,x2,y2){
+         return Math.sqrt( Math.pow((x2-x1),2)+ Math.pow((y2-y1),2));
+     }
+    
+        
+    </script>
+</body>
+</html>

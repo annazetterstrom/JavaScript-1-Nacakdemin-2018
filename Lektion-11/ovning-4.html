@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let total = 0;
+        while (true) {
+            let n = prompt("Skriv in ett heltal!");
+            if (n === null)
+                break;
+
+            // Metoden Number() Konverterar sträng till Number
+            n = Number(n);
+            if (Number.isInteger(n)) {
+                for (let i = 1; i <= n; i++) {
+                    total += i; // Lägg till
+                }
+                break; 
+
+            } else {
+                alert("Felaktig inmatning!\n Skriv ett heltal!");
+                continue; 
+            }
+        }
+
+        alert("Sumnman är " + total); 
+    </script>
+</body>
+
+</html>

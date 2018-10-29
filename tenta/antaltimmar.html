@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Antal timmar</title>
+</head>
+<body>
+    <h1>Vi ska konvertera antal minuter till timmar</h1>
+    <script>
+    
+    let minutes = prompt('Ange ett antal minuter (minst 60)');
+
+    minutes = Number(minutes);
+    
+    if(minutes < 60){
+        return 'Felaktig inmatning';
+    }
+    else{
+        let hours = minutes % 60;
+    }
+
+    alert(hours);
+    
+
+    </script>
+</body>
+</html>

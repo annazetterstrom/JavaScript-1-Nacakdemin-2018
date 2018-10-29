@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>While-satsen</h1>
+    <script>
+        console.log("Välkommen till spelet!");
+        while (true) { // Hit kommer man vid continue; 
+            let name = prompt("Vad heter du?");
+            console.log(name);
+            if (name === null) {
+                break;
+            }
+            if (name === "") {
+                continue;
+            }
+            alert("Hej " + name)
+
+        } // Hit kommer vi vid break;
+        console.log("Hejdå!");
+    </script>
+
+</body>
+
+</html>
