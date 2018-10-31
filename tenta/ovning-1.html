@@ -16,6 +16,28 @@ Exempel: om talet n är 5 så skall programmet räkna ut 1+2+3+4+5 = 15
 Tips! Använd Number.isInteger()
 */
 
+ let total = 0;
+        while (true) {
+            let n = prompt("Skriv in ett heltal!");
+            if (n === null)
+                break;
+
+            // Metoden Number() Konverterar sträng till Number
+            n = Number(n);
+            if (Number.isInteger(n)) {
+                for (let i = 1; i <= n; i++) {
+                    total += i; // Lägg till
+                }
+                break; 
+
+            } else {
+                alert("Felaktig inmatning!\n Skriv ett heltal!");
+                continue; 
+            }
+        }
+
+        alert("Sumnman är " + total); 
+
     </script>
 </body>
 </html>

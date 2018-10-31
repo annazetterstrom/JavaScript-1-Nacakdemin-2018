@@ -9,7 +9,38 @@
 <body>
     <script>
    
+/*
+Skriv ett program som läser in en varas pris, exkl. moms.
 
+Programmet skall också läsa in momssatsen som skall vara ett helt antal procent t.ex. 25.
+Programmet skall beräkna dels varans pris inkl. moms och dels momsen.
+De två resultaten skall visas i en dialogruta (alert).
+Använd \n för att lägga till en radbrytning.
+*/
+
+let pris = prompt('Vad kostar varan?');
+let moms = prompt('Vad är momsen?'); 
+
+pris = Number(pris);  // Konverterar strängen till number 
+moms = Number(moms); 
+
+function getMoms(moms){ // Uträkningen sparars i funktionen getMoms
+    return moms / 100; 
+}
+
+function getMomsIKronor (){
+   moms = moms / 100; // Räknar ut momsen i decimaltal
+   return moms * pris; // räknar ut momsen i kr från priset
+}
+
+
+function getPrice(x){
+    console.log('moms '+x);
+    return (pris * x) + pris ; // räknar ut momsen och lägger till på priset
+}
+let fullPrice = getPrice(getMoms(moms)); // Return värdet i getPrice och getMoms sparas i fullPrice
+
+alert('Varan kostar totalt: ' + fullPrice + '\nVarav moms: ' + getMomsIKronor() ); 
 
     </script>
 </body>

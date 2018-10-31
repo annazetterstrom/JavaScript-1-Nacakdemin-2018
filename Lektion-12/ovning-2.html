@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Övning 2</title>
+    <style>
+    .nice{
+        color: green; 
+    }
+    </style>
+</head>
+<body>
+    <h1>Övning 2</h1>
+
+    <h1>Rubrik</h1>
+    <h1>Rubrik</h1>
+    <h1>Rubrik</h1>
+    <h1>Rubrik</h1>
+
+    <script>
+// Koppla CSS-klassen till första rubriken
+// Hämta alla h1
+let allH1 = document.getElementsByTagName('h1');
+console.log(allH1); // HTMLCollection
+
+//Hämta första elementet
+let firstH1 = allH1[0]
+console.log(firstH1);
+
+// Lägg till klassen nice
+firstH1.className = 'nice'; 
+console.log(firstH1);
+
+// Koppla klassen nice till sista rubriken
+
+// Hämta sista elementet och koppla klassen
+allH1[allH1.length-1].className = 'nice'; 
+ 
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Övning 1</title>
+</head>
+<body>
+    <h1>Övning 2</h1>
+    <h1 id='demo'>huvudrubrik</h1>
+    <script>
+        // Steg 1. Hämta referens till element
+        let h = document.getElementById('demo'); 
+        // Hämta texten från elementet
+        let text = h.innerHTML;
+        // Ändra text till versaler
+        text = text.toUpperCase(); // Mutable och immutable 
+        // Skicka den nya texten till elmentet
+        h.innerHTML = text; 
+
+        // Eller med snyggare källkod
+        h.innerHTML = h.innerHTML.toUpperCase(); // ändrar till stora bokstäver och sparar det i 
+
+        console.log(text);
+
+    </script>
+</body>
+</html>

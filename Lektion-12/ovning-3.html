@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Övning 3</title>
+</head>
+<body>
+    <h1>Övning 3</h1>
+    <p>Stycke 1</p>
+    <p>Stycke 2.</p>
+    <p>Stycke 3</p>
+
+    <script>
+    /*
+• Skapa ett skript som går igenom alla stycken i ett dokument.
+• Du ska undersöka om varje stycke avslutas med en punkt.
+• Om inte så ska skriptet lägga till en punkt.
+*/
+
+        // Hämta alla p-element
+    let p = document.getElementsByTagName('p'); 
+    
+    // Itererar över en HTMLCollection
+    for (let i = 0; i < p.length; i++) {
+        // Hämta innehållet
+        let s = p[i].innerHTML
+        // Undersök om varje styckte avslutas med en punkt
+       if(s[s.length-1] !== '.'){
+        //    om inte så lägg till
+        s += '.';
+       }
+    //    Uppdatera trädet 
+       p[i].innerHTML = s; 
+           
+       console.log(s);
+        
+    }
+    
+    </script>
+</body>
+</html>

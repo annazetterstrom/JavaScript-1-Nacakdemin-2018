@@ -7,23 +7,29 @@
     <title>Antal timmar</title>
 </head>
 <body>
-    <h1>Vi ska konvertera antal minuter till timmar</h1>
+    <h1 id="tid"> </h1>
+   
     <script>
-    
+    let elTid = document.getElementById("tid");//här ligger din <h1>innerText</h1>
+    // elTid.innerText = "hej";
+    while(true){
     let minutes = prompt('Ange ett antal minuter (minst 60)');
 
     minutes = Number(minutes);
     
     if(minutes < 60){
-        return 'Felaktig inmatning';
+        alert('Felaktig inmatning');
+        continue;
     }
     else{
-        let hours = minutes % 60;
+        console.log("du kom in"); // testar om du kom in i else satsen. 
+        let hours = minutes / 60;
+        minutes = minutes % 60;
+        alert(Math.round(hours) + ' timmar och ' + minutes + 'minuter'); // en popupruta
+        // elTid.innerText = Math.round(hours) + ' timmar och ' + minutes + ' minuter'; // detta skriver ut på sidan istället
     }
-
-    alert(hours);
+}
     
-
     </script>
 </body>
 </html>
