@@ -6,6 +6,30 @@ För ett heltal större än noll är fakulteten lika med produkten av alla h
 • Testa funktionen via en prompt (i webbläsaren).
 • Visa resultatet på webbsidan (ej alert eller console).
 */
-let tal = prompt('Ange ett tal mellan 1-1000'); 
+ while(true){
+    let tal = prompt('Ange ett tal mellan 1-1000');
+    if(tal === null){
+        break; 
+   }
+   else{
+
+   document.write(fak(tal));
+   break;
+   }
+  
+ }
+
+function fak(tal){
+    for (let i = tal -1; i > 0; i--) {
+        tal = tal * i;
+        
+        
+    }
+    return tal; 
+}
+
+
+
+
 
 
